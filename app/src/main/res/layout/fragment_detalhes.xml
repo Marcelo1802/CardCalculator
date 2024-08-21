@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetalhesFragment">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/txt_detalhes"
+        android:textColor="@color/theme"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ImageView_detalhes"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        tools:src="@drawable/money_svgrepo_com"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detalhes_valorinicial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:background="@drawable/shape_txt_50_color"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        tools:text="valor inicial"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ImageView_detalhes" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detalhes_taxa_juros"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:background="@drawable/shape_txt_50_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="tx"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detalhes_valorinicial" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detalhes_aporte"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:background="@drawable/shape_txt_50_color"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        tools:text="tx"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detalhes_taxa_juros" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detalhes_tempo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:background="@drawable/shape_txt_50_color"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        tools:text="tx"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detalhes_aporte" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detalhes_resultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:background="@drawable/shape_txt_50_color"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        tools:text="tx"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detalhes_tempo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detalhes_exit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/exit_svgrepo_com"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
