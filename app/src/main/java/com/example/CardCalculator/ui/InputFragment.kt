@@ -35,7 +35,7 @@ class InputFragment : Fragment() {
 
             if (inputValorInicial != null && inputTaxaJuros != null && inputAporte != null && inputTempo != null) {
                 val resultado = calcular(inputValorInicial, inputTaxaJuros, inputAporte, inputTempo)
-                fatoresViewModel.savefatoresdata(inputValorInicial, inputAporte, inputTaxaJuros, resultado, inputTempo)
+                fatoresViewModel.savefatoresdata(inputValorInicial, inputTaxaJuros, inputAporte, resultado, inputTempo)
                 Toast.makeText(requireContext(), "Simulação salva", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(requireContext(), "Por favor, insira valores válidos.", Toast.LENGTH_SHORT).show()

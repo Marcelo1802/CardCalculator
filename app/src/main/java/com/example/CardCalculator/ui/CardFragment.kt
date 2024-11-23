@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.CardCalculator.R
 import com.example.CardCalculator.databinding.FragmentCardBinding
+import com.example.CardCalculator.model.fatores
 import com.example.CardCalculator.model.fatoresviewmodel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -31,11 +32,12 @@ class CardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initRecyclerView()
+        val load = fatoresViewModel.loadFatores()
+        initRecyclerView(load)
         setupObservers()
     }
 
-    private fun initRecyclerView() {
+    private fun initRecyclerView(load: Unit) {
         adapter = fatoresAdapter(
             { fator ->
                 // Código para quando um item é clicado
@@ -47,6 +49,7 @@ class CardFragment : Fragment() {
             { position ->
                 // Código para quando o botão de deletar é clicado
                 fatoresViewModel.deletefator(position) // Remove o fator do ViewModel
+                fatoresViewModel.loadFatores() // Atualiza a lista após a deleção
             }
         )
 
@@ -60,10 +63,10 @@ class CardFragment : Fragment() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        fatoresViewModel.loadFatores() // Força a atualização da lista ao voltar para o fragmento
-    }
+//    override fun onResume() {
+//        super.onResume()
+//        fatoresViewModel.loadFatores() // Força a atualização da lista ao voltar para o fragmento
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()

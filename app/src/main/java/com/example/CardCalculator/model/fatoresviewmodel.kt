@@ -28,4 +28,5 @@ class fatoresviewmodel(private val repository: fatoresrepository) : ViewModel() 
      fun loadFatores() {
         _fatoresList.value = repository.getfatores()
     }
+
 }
